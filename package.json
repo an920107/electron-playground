@@ -1,0 +1,17 @@
+{
+  "name": "electron-playground",
+  "version": "1.0.0",
+  "description": "Hello World!",
+  "main": "dist/main.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc && copyfiles -u 1 src/**/*.html src/**/*.css dist/",
+    "start": "yarn run clean && yarn run build && electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "electron": "23.1.3"
+  }
+}
