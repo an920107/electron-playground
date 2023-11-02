@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'path';
 
 const createWindow = () => {
@@ -15,6 +15,7 @@ const createWindow = () => {
 }
 
 app.whenReady().then(() => {
+    ipcMain.handle('ping', () => 'pong')
     createWindow()
 })
 

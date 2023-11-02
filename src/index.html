@@ -3,15 +3,70 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-    <title>Hello from Electron renderer!</title>
+    <title>TODO List</title>
+
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <h1>Hello from Electron renderer!</h1>
-    <p>👋</p>
-    <p id="info"></p>
+    <!-- Nav Bar -->
+    <nav class="navbar bg-dark navbar-dark p-3">
+        <div class="container">
+            <div class="navbar-brand">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span class="px-3">TODO List</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- List View -->
+    <div class="container py-3 py-sm-5">
+        <div id="todoListView" class="row">
+            <!-- TEMPLETE -->
+            <!-- <div class="col-12 py-1">
+                <div class="card">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <div class="row">
+                                <div class="col">
+                                    Test content.
+                                </div>
+                                <div class="col text-end">
+                                    <button class="btn btn-danger">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+            </div> -->
+            <!-- TEMPLETE -->
+        </div>
+    </div>
+
+    <!-- Input Field -->
+    <div class="fixed-bottom">
+        <div class="container pb-3 pb-sm-5">
+            <div class="row">
+                <div class="col-11">
+                    <input id="todoInput" type="text" class="form-control" placeholder="Type something">
+                </div>
+                <div class="col-1">
+                    <button id="todoButton" class="btn btn-primary">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script src="./renderer.js"></script>
 
