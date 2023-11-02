@@ -33,13 +33,18 @@
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
                             <div class="row">
-                                <div class="col">
-                                    Test content.
-                                </div>
-                                <div class="col text-end">
-                                    <button class="btn btn-danger">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
+                                <div class="col">Test content.</div>
+                                <div class="col-auto d-flex flex-row-reverse">
+                                    <div class="ps-2">
+                                        <button class="btn btn-danger">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ps-2">
+                                        <button class="btn btn-secondary">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </blockquote>
@@ -66,8 +71,8 @@
         </div>
     </div>
 
+    <script src="./renderer.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<script src="./renderer.js"></script>
 
 </html>
